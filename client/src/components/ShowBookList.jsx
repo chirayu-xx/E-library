@@ -15,7 +15,7 @@ function ShowBookList() {
       .then(setLoading(false));
   }, []);
 
-
+  if(books.length === 0) return <h1 className="w-full h-screen flex justify-center items-center text-3xl text-white">Loading books....</h1>
   return (
     <div className="flex flex-col gap-10 w-full p-5 justify-center">
       <h1 className="text-center text-5xl text-white font-bold">Book List</h1>
